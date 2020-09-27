@@ -7,7 +7,7 @@ The site also contains an online shop for selling environmentally friendly produ
    To implement this website we use react in frontend side, Java script in backend and for design we use material UI.
 
  # Who are we :
-    We are five friends from Jordan who cooperated to build this website. Our team includes:
+   We are five friends from Jordan who cooperated to build this website. Our team includes:
 -	Nosibah Elayan .
 -	Sawsan Munawer .
 -	Toleen Balool .
