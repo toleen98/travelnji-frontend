@@ -23,8 +23,9 @@ class Map extends Component {
     render () {
         return (
             <div>
-                <div className="container">
+                <div className="container"  style={{ display: 'block',marginLeft: 'auto', marginRight: 'auto',width: '60%'}}>
                     <ImageMapper src={URL} map={MAP} 
+                       
                         onClick={area => this.clicked(area)} 	
                     />
                 </div>

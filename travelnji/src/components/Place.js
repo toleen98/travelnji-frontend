@@ -40,6 +40,40 @@ const Place = ({place}) => {
                           </GridItem>
                         </GridContainer>
             </div>
+            <div>
+            <h3>About {place}</h3>
+            {(Places[place].info.map(para => {
+                return (
+                    <p>{para}</p>
+                )
+            }))}
+            </div>
+            <div>
+                <h3>Things To Do</h3>
+                <div style={{display:"flex"}}>
+                    {Places[place].activities.map(active => {
+                       return  (
+                           active.imgs.map(img => {
+                                return (
+                                    <div>
+                                        <img 
+                                        src={img} 
+                                        alt="..."
+                                        width={200} 
+                                        height={200}   
+                                        />
+                                        <h4>{active.name}</h4>
+                                    </div>
+                                )
+                            })
+
+                        )
+                    })}
+                </div>
+            
+            </div>
+
+
         </div>
     )
 }
