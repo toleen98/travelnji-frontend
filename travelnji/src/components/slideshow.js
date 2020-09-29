@@ -1,12 +1,12 @@
 import React from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import img1 from "../assets/image/areas.jpg"
-import img2 from "../assets/image/example.jpg"
-import img3 from "../assets/image/example1.jpg"
-import img4 from "../assets/image/how.jpg"
-import img5 from "../assets/image/what.jpg"
-import img6 from "../assets/image/uns.jpg"
+import img1 from "../assets/image/areas.jpg";
+import img2 from "../assets/image/example.jpg";
+import img3 from "../assets/image/example1.jpg";
+import img4 from "../assets/image/how.jpg";
+import img5 from "../assets/image/what.jpg";
+import img6 from "../assets/image/uns.jpg";
 export default function SlideShow() {
     return (
         <div className="slider-container">
