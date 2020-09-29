@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import ImageMapper from 'react-image-mapper';
+import Place from "./Place";
 
 let URL = "https://kingabdullah.jo/sites/default/files/map-en.png"
 let MAP = {
@@ -14,17 +15,20 @@ let MAP = {
 }
 class Map extends Component {
     state = {place :""}
+
     clicked = area => {
         this.setState({place: area.name})
     }
+    
     render () {
         return (
             <div>
                 <div className="container">
-                    <ImageMapper src={URL} map={MAP}
+                    <ImageMapper src={URL} map={MAP} 
                         onClick={area => this.clicked(area)} 	
                     />
                 </div>
+                <Place place={this.state.place}/>
             </div>
         )
     }
