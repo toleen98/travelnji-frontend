@@ -1,9 +1,10 @@
 import React from 'react';
-import l from '../assets/l.jpg'
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
+import Button from '@material-ui/core/Button'
+
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import AccountCircle from '@material-ui/icons/AccountCircle';
@@ -14,6 +15,10 @@ import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
 import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
 import {withRouter} from 'react-router-dom';
+import Bags from './Bags'
+import { Link as RouterLink, useHistory } from 'react-router-dom'
+import logo from "../assets/logo.png";
+
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
@@ -49,14 +54,25 @@ const useStyles = makeStyles((theme) => ({
     
       <AppBar position="static">
         <Toolbar>
-          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-logoImg
+          <IconButton component={RouterLink} to='/' edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+<img src={logo} width ="60px" highet="10px" component={RouterLink} to='/'></img>
+
           </IconButton>
           <Typography variant="h6" className={classes.title}>
 
        </Typography>
           {auth && (
             <div>
+
+
+             <Button  component={RouterLink} to="/SlideShow" color="inherit" className={classes.title}>
+            SlideShow
+          </Button>
+
+           <Button  component={RouterLink} to="/contact" color="inherit" className={classes.title}>
+            contact
+          </Button>
+
               <IconButton
                 aria-label="account of current user"
                 aria-controls="menu-appbar"
@@ -83,9 +99,27 @@ logoImg
                 open={open}
                 onClose={handleClose}
               >
-                <MenuItem onClick={handleClose}>  Bags</MenuItem>
-                <MenuItem onClick={handleClose}>Bottles</MenuItem>
+                <MenuItem onClick={handleClose} component={RouterLink} to='/Bags'> 
+                Bags 
+                {/* <Link className="navbar-brand" to="/Bags">
+                  
+                   </Link> */}
+
+                 </MenuItem>
+                <MenuItem onClick={handleClose} component={RouterLink} to='/Bottels'>Bottles</MenuItem>
+                
               </Menu>
+
+
+
+
+
+
+
+
+
+
+
             </div>
           )}
         </Toolbar>
