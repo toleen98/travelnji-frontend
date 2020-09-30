@@ -1,7 +1,9 @@
-import React from 'react';
+// import React from 'react';
+import Reactfrom 'react'
 import Map from "./components/map"
 import StickyFooter from "./components/contact"
 import SlideShow from './components/slideshow'
+
 import Bags from './components/Bags'
 import Bottels from './components/Bottels'
 
@@ -35,6 +37,7 @@ function App() {
 
     )
   }
+
 
 
 export default App
