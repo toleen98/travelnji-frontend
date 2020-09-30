@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
@@ -52,11 +53,11 @@ const useStyles = makeStyles((theme) => ({
   return (
     <div className={classes.root}>
     
-      <AppBar position="static" style={{backgroundColor:'#b26500'}}>
+      <AppBar position="static">
         <Toolbar>
           <IconButton component={RouterLink} to='/' edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-<img src={logo} width ="60px" highet="10px" component={RouterLink} to='/'></img> 
-Travelnji
+<img src={logo} width ="60px" highet="10px" component={RouterLink} to='/'></img>
+
           </IconButton>
           <Typography variant="h6" className={classes.title}>
 
@@ -127,4 +128,5 @@ Travelnji
     </div>
   );
 }
+
 export default  MenuAppBar
