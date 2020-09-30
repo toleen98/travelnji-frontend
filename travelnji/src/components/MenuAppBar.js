@@ -52,11 +52,11 @@ const useStyles = makeStyles((theme) => ({
   return (
     <div className={classes.root}>
     
-      <AppBar position="static">
+      <AppBar position="static" style={{backgroundColor:'#b26500'}}>
         <Toolbar>
           <IconButton component={RouterLink} to='/' edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-<img src={logo} width ="60px" highet="10px" component={RouterLink} to='/'></img>
-
+<img src={logo} width ="60px" highet="10px" component={RouterLink} to='/'></img> 
+Travelnji
           </IconButton>
           <Typography variant="h6" className={classes.title}>
 
