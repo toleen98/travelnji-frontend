@@ -1,14 +1,15 @@
 import React, {Component} from 'react';
 import Places from '../data/places';
 import Card from './ImgCard'
-
+import {GrFormNext, GrFormPrevious} from 'react-icons/gr'
 class ImgesSlideshow extends Component {
     constructor(props){
         super(props);
         this.state = {
           activity:Places[this.props.place].activities,
           indexImg:0,
-          index:0
+          index:0,
+          i:0,
         }
     }
 
@@ -29,8 +30,11 @@ class ImgesSlideshow extends Component {
       else{
         this.setState({
           indexImg: indexImg + 1,
+          
         })
-      }  
+      } 
+      
+      this.setState({ i: this.state.i + 1})
         
     }
     
@@ -54,15 +58,24 @@ class ImgesSlideshow extends Component {
           indexImg: indexImg - 1,
         })
       }
-        
+      this.setState({ i: this.state.i - 1})
     }
 
     render(){
+      let {index, indexImg, activity, i} = this.state
         return (
-            <div >
-                <button onClick={this.nextImg}>Next</button>
-                    <div className='cards-slider'>
-                      <div className='cards-slider-wrapper'>
+         
+            <div style={{textAlign:'center',}} >
+              <div style={{display:'flex', marginLeft:'50%',marginBottom:20}}>
+                <button onClick={this.prevImg} className='btn'><GrFormPrevious size='30' color='white'/></button>
+                <button onClick={this.nextImg} className='btn'><GrFormNext size='30' color='white'/></button>
+              </div>
+                
+                <div style={{backgroundColor:'#060b5c'}}>
+                <div className='cards-slider'  >
+                      <div className='cards-slider-wrapper' style={{
+                  'transform': `translateX(-${ i   *(100/ activity.length * 6 ) }%)`, 
+                }}>
                       {Places[this.props.place].activities.map(active => {
                        return  (
                            active.imgs.map(img => {
@@ -76,8 +89,7 @@ class ImgesSlideshow extends Component {
                     })}
                       </div>
                     </div>
-
-                    <button onClick={this.prevImg}>Prev</button>
+                </div>
             </div>
         )
     }
