@@ -5,6 +5,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import GridContainer from "./GridContainer.js";
 import GridItem from "./GridItem.js";
 import Places from '../data/places'
+import ImgesSlideshow from './ImageSlideshow'
 
 const Place = ({place}) => {
     if (!place) return null
@@ -50,27 +51,8 @@ const Place = ({place}) => {
             </div>
             <div>
                 <h3>Things To Do</h3>
-                <div style={{display:"flex"}}>
-                    {Places[place].activities.map(active => {
-                       return  (
-                           active.imgs.map(img => {
-                                return (
-                                    <div>
-                                        <img 
-                                        src={img} 
-                                        alt="..."
-                                        width={200} 
-                                        height={200}   
-                                        />
-                                        <h4>{active.name}</h4>
-                                    </div>
-                                )
-                            })
-
-                        )
-                    })}
-                </div>
-            
+                <ImgesSlideshow place={place}/>
+               
             </div>
 
 
