@@ -1,4 +1,4 @@
-body {
+/*body {
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
     font-size: 16px;
     -webkit-font-smoothing: antialiased;
@@ -15,7 +15,7 @@ code {
 }
 
   /* Buttons and links */
-  button {
+ /* button {
     background: #5469d4;
     font-family: Arial, sans-serif;
     color: #ffffff;
@@ -36,9 +36,9 @@ code {
   button:disabled {
     opacity: 0.5;
     cursor: default;
-  }
+  }*/
   /* spinner/processing state, errors */
-  .spinner,
+ /* .spinner,
   .spinner:before,
   .spinner:after {
     border-radius: 50%;
@@ -100,4 +100,4 @@ code {
     form {
       width: 80vw;
     }
-  }
+  }*/
