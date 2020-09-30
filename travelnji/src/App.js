@@ -1,26 +1,40 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Map from "./components/map"
+import StickyFooter from "./components/contact"
+import SlideShow from './components/slideshow'
+import Bags from './components/Bags'
+import Bottels from './components/Bottels'
+
+import contact from './components/contact'
+
+import { BrowserRouter as Router, Route } from 'react-router-dom'
+import ButtonAppBar from './components/MenuAppBar'
+import MenuAppBar from './components/MenuAppBar';
+import GridContainer from './components/GridContainer';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    <Router>
+    
+    <div >
+    <MenuAppBar/>
+    <Route path="/" exact component={Map} />
+    <Route path="/Bags" exact component={Bags} />
+    <Route path="/Bottels" exact component={Bottels} />
+    <Route path="/" exact component={contact} />
 
-export default App;
+    <Route path="/contact" exact component={contact} />
+        <Route path="/SlideShow" exact component={SlideShow} />
+
+
+
+
+
+    </div>
+    </Router>
+
+    )
+  }
+
+
+export default App
