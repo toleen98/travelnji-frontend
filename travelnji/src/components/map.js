@@ -1,7 +1,10 @@
 import React, {Component} from 'react'
 import ImageMapper from 'react-image-mapper';
 import Place from "./Place";
-
+import Pic from "../assets/pic1.jpg"
+import Pic1 from "../assets/pic5.jpg"
+import Pic2 from "../assets/pic6.jpg"
+import "../index.css"
 let URL = "https://kingabdullah.jo/sites/default/files/map-en.png"
 let MAP = {
   name: "my-map",
@@ -25,20 +28,34 @@ class Map extends Component {
             <div>
                 <div className="App">
                     <div style={{position:'relative', width:'100%', textAlign:'center'}}>
-                        <img src='https://i.pinimg.com/564x/cc/2c/e4/cc2ce44061b84155a1d00ac5b60acc9a.jpg' alt='patra' width={'100%'} height={500}/>
-                        <div style={{position:'absolute',top: 200, color:'#c2a776',left:'40%'}}>
-                            <h1 style={{fontSize:49, color:'#706042' }}>Welcome To Jordan</h1>
-                            <h3>Enjoy A Sustainable Journey</h3>
+                        <img src={Pic} alt='patra' width={'100%'} height={500} />
+                        <div style={{position:'absolute',top: 75, color:'#c2a776',left:'10%'}}>
+                            <h1 style={{fontSize:49, fontFamily:'Sofia', color:'#1b875b' }}>Welcome To Travelnji</h1>
+                            <h3 style={{fontSize:20, fontFamily:'Sofia', color:'#5fd18f' }}>Is the perfect destination for sustainable tourism in Jordan.</h3>
                         </div>
         
                     </div>
-                 </div>   
-                <div className="container"  style={{ display: 'block',marginLeft: 'auto', marginRight: 'auto',width: '60%'}}>
-                    <ImageMapper src={URL} map={MAP} 
+                 </div>  
+                  
+                 <div style={{ position:'absolute' ,top:650, color:'#4d79ff',left:'9%'}}>
+                 <img src={Pic1} width={400} height={400} left={70}/> </div>
+                     <div style={{position:'absolute',top:700, color:'#4d79ff',left:'60%' ,right:'5%'}}>
+                         <p style={{fontSize:20, fontFamily:'Sofia', color:'#1e7b1e' }}>As this website displays a variety of tourist areas in Jordan so that tourists can choose between them when they come to Jordan. It reviews the most important environmentally friendly activities that can be held in these areas.</p>
+                     </div>
+                     <div>
+                         <div style={{ position:'absolute' ,top:1200, color:'#4d79ff',left:'60%'}}>
+                 <img src={Pic2} width={500} height={400} left={70}/> </div>
+                     <div style={{position:'absolute',top:1350, color:'#4d79ff',right:'50%' , left:'9%'}}>
+                         <p style={{fontSize:20, fontFamily:'Sofia', color:'#1FA496' }}>As this website displays a variety of tourist areas in Jordan so that tourists can choose between them when they come to Jordan. It reviews the most important environmentally friendly activities that can be held in these areas.</p>
+                     </div> 
+                     </div>
+                    
+                {/* <div className="container"  style={{ display: 'ruby',marginLeft: 'auto', marginRight: '50%',width: '50%'}}>
+                    <ImageMapper src={URL} style={{}} map={MAP}  
                        
                         onClick={area => this.clicked(area)} 	
                     />
-                </div>
+                </div> */}
                 <Place place={this.state.place}/>
             </div>
         )

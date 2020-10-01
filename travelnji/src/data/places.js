@@ -293,10 +293,7 @@ let Places = {
     maan:{
         info: [
             'is one of the governorates of Jordan, it is located south of Amman, Jordan\'s capital. Its capital is the city of Ma\'an. This governorate is the largest in the kingdom of Jordan by area.',
-            'In the 7th century A.D. the lands of Ma\'an were annexed to the Islamic Khaliphate. With the coming of the Crusaders in the 11th century, The Crusaders took control of the highlands of Shoubak, at an elevation of more than 1300 meters above sea level, the Crusaders built the castle of Montreal in the city of Shoubak.
-
-            Ma\'an was the capital of the Arab state declared by Emir Abdullah for a short period of time in 1920 before moving the capital to Amman. The first newspaper in the modern day Jordan was issued in Ma\'an and was named Alhaqqu Ya\'lu',
-            'Although Ma\'an Governorate has the largest area of the 12 governorates that constitute the Kingdom of Jordan, it has the lowest population density: less than 4 persons per square km. It has international borders with Saudi Arabia from the east and south, and borders Aqaba, Tafilah, and Karak governorates from the west, and Amman Governorate from the north.'
+            'In the 7th century A.D. the lands of Ma\'an were annexed to the Islamic Khaliphate. With the coming of the Crusaders in the 11th century, The Crusaders took control of the highlands of Shoubak, at an elevation of more than 1300 meters above sea level, the Crusaders built the castle of Montreal in the city of Shoubak. Maan was the capital of the Arab state declared by Emir Abdullah for a short period of time in 1920 before moving the capital to Amman. The first newspaper in the modern day Jordan was issued in Maan and was named Alhaqqu YaluAlthough Maan Governorate has the largest area of the 12 governorates that constitute the Kingdom of Jordan, it has the lowest population density: less than 4 persons per square km. It has international borders with Saudi Arabia from the east and south, and borders Aqaba, Tafilah, and Karak governorates from the west, and Amman Governorate from the north.'
         ],
         imges:[
             'https://i.pinimg.com/474x/20/58/06/205806a19d18ea64335dc09b1d2d702c.jpg',
