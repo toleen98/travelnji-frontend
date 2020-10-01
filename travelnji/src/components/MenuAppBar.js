@@ -4,7 +4,6 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button'
-
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import AccountCircle from '@material-ui/icons/AccountCircle';
@@ -18,6 +17,8 @@ import {withRouter} from 'react-router-dom';
 import Bags from './Bags'
 import { Link as RouterLink, useHistory } from 'react-router-dom'
 import logo from "../assets/logo.png";
+import "../index.css"
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -52,10 +53,10 @@ const useStyles = makeStyles((theme) => ({
   return (
     <div className={classes.root}>
     
-      <AppBar position="static" style={{backgroundColor:'#b26500'}}>
+      <AppBar position="static" style={{backgroundColor:'#ffffff', height:'55px'}}>
         <Toolbar>
-          <IconButton component={RouterLink} to='/' edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-<img src={logo} width ="60px" highet="10px" component={RouterLink} to='/'></img> 
+          <IconButton component={RouterLink} to='/' edge="start" className={classes.menuButton} color='' aria-label="menu" >
+<img src={logo} width ="50px" highet="10px" component={RouterLink} to='/'></img> 
 Travelnji
           </IconButton>
           <Typography variant="h6" className={classes.title}>
@@ -65,12 +66,12 @@ Travelnji
             <div>
 
 
-             <Button  component={RouterLink} to="/SlideShow" color="inherit" className={classes.title}>
+             <Button  component={RouterLink} to="/SlideShow" color='' className={classes.title}>
             SlideShow
           </Button>
 
-           <Button  component={RouterLink} to="/contact" color="inherit" className={classes.title}>
-            contact
+           <Button  component={RouterLink} to="/contact" color="" className={classes.title}>
+            Map
           </Button>
 
               <IconButton
