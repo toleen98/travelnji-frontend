@@ -1,3 +1,7 @@
+
+
+
+
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import clsx from 'clsx';
@@ -20,35 +24,58 @@ import img from "../assets/logo.jpg";
 
 import bag1 from "../assets/bag1.jpg";
 import bag from "../assets/bag.jpg";
+// const useStyles = makeStyles((theme) => ({
+//      body: {
+//     display: 'grid',
+//     gridTemplateColumns: '1fr 1fr',
+//     gridGap: theme.spacing(2),
+//     [theme.breakpoints.up('md')]: {
+//       gridTemplateColumns: '1fr 1fr 1fr 1fr',
+//     },
+//     '$jagged &': {
+//       '& > *:nth-child(even)': {
+//         paddingTop: theme.spacing(6),
+//       },
+//     },
+//   },
+//   header: {
+//     textAlign: 'center',
+//   },
+//   heading: {
+//     textTransform: 'uppercase',
+//   },
+//   avatar: {
+//     backgroundColor: red[500],
+//   },
+//   media: {
+//     height: 0,
+//     paddingTop: '56.25%', // 16:9
+//   },
+// }));
 const useStyles = makeStyles((theme) => ({
-     body: {
-    display: 'grid',
-    gridTemplateColumns: '1fr 1fr',
-    gridGap: theme.spacing(2),
-    [theme.breakpoints.up('md')]: {
-      gridTemplateColumns: '1fr 1fr 1fr 1fr',
-    },
-    '$jagged &': {
-      '& > *:nth-child(even)': {
-        paddingTop: theme.spacing(6),
-      },
-    },
-  },
-  header: {
-    textAlign: 'center',
-  },
-  heading: {
-    textTransform: 'uppercase',
-  },
-  avatar: {
-    backgroundColor: red[500],
+   root: {
+    maxWidth: 345,
   },
   media: {
     height: 0,
     paddingTop: '56.25%', // 16:9
   },
-}));
+  expand: {
+    transform: 'rotate(0deg)',
+    marginLeft: 'auto',
+    transition: theme.transitions.create('transform', {
+      duration: theme.transitions.duration.shortest,
+    }),
+  },
+  expandOpen: {
+    transform: 'rotate(180deg)',
+  },
+  avatar: {
+    backgroundColor: red[500],
+  },
 
+
+}));
 export default function Bottels() {
   const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
@@ -59,7 +86,10 @@ export default function Bottels() {
 
   return (
 <div style ={h1} >
-    <div >
+<div style={h4}>the waste plastic crisis is continuously growing, with an average of 38 million bottles piling up in landfill sites, polluting our oceans and causing widespread environmental damage each year. Thankfully, designers worldwide are encouraging us to cut down on single-use plastic by making the re-useable water bottle stylish, innovative and eco-friendly. there’s no better time to invest in a bottle for life. Fill up and drink it in...</div>
+
+    <div style={h2}>
+    <br></br><br></br>
     <Card className={classes.root}>
       <CardHeader
         avatar={
@@ -97,9 +127,8 @@ export default function Bottels() {
     </div>
 
 
-    <div >
-    <br></br>
-    <br></br>
+    <div style={h2}>
+    <br></br><br></br>
     <Card className={classes.root}>
       <CardHeader
         avatar={
@@ -138,48 +167,9 @@ export default function Bottels() {
     </div>
 
 
-      
 
-
-    <div >
+    <div style={h2}>
     <br></br><br></br>
-    <Card className={classes.root}>
-      <CardHeader
-        avatar={
-          <Avatar
-                      aria-label="recipe"
-                      src={img}
-                      className={classes.avatar}
-                    />
-        }
-        action={
-          <IconButton aria-label="settings">
-            <MoreVertIcon />
-          </IconButton>
-        }
-        title="sport plastic water bottle"
-      
-      />
-      <CardMedia
-        className={classes.media}
-        image="https://sc01.alicdn.com/kf/Hc700c509336c465a8688287a6db080708.jpg_q50.jpg"
-        title=" magic bag "
-      />
-      <CardContent>
-        <Typography variant="body2" color="textSecondary" component="p">
-Customized 700ML LFGB filter 2020 sport plastic water drinking bottle
-    </Typography>
-      </CardContent>
-
-      <Button aria-label="visit" href="https://m.alibaba.com/product/1600059675631/Filter-Water-Bottle-Water-Filter-Water.html?s=p&__detailProductImg=//s.alicdn.com/@sc01/kf/H811e7979922948c98f49985a23818fa3I.jpg_200x200.jpg&spm=a2706.wapppc2020.1998817009.20.2cfc134bzS5J1r">
-                      
-                     visit Website 
-                      </Button>
-     
-    </Card>
-    </div>
-
-    <div ><br></br><br></br>
     <Card className={classes.root}>
       <CardHeader
         avatar={
@@ -216,7 +206,7 @@ Unique Group Leakproof Wide Mouth Water Filter Fitting Stainless Steel Water Bot
     </Card>
     </div>
 
-    <div >
+    <div style={h2}>
     <br></br><br></br>
     <Card className={classes.root}>
       <CardHeader
@@ -264,14 +254,50 @@ Unique Group Leakproof Wide Mouth Water Filter Fitting Stainless Steel Water Bot
   );
 }
 
-
-
-
 const h1={
-  "width":" 50%",
- " minHeight":"50%",
-  "margin":"10 auto",
-   "display": "grid",
-   " grid-template-columns":" repeat(auto-fill, minmax(230px, 1fr))",
-   " grid-gap": "50px",
+//   "width":" 50%",
+//  " minHeight":"50%",
+//   "margin":"10 auto",
+   
+//    " grid-template-columns":" repeat(auto-fill, minmax(230px, 1fr))",
+//    " grid-gap": "50px",
+
+   
+// "  width":"100%",
+//   " display ": "flex",
+//   "justify-content": "center"
+// }
+"display": "flex",
+ "   flex-direction": "row",
+    "flex-wrap": "wrap",
+  "  justify-content": "center",
+   " align-items": "center"
+        }
+
+const h2={
+  "  width":"50%",
+  " display ": "flex",
+  "justify-content": "center",
+
+" minHeight":"50%",
+  // "display": "-webkit-box",
+  "-webkit-box-pack": "center",
+ " -webkit-box-align": "center",
+  "margin": "auto",
+  // "position": "absolute",
+  "left":"0",
+  "right": "0",
+  "top": "0",
+  "bottom": "0",
+
+}
+const h4={
+" box-sizing":" border-box",
+  "width": "100%",
+  // "display": "flex",
+ " justify-content": "center",
+  "padding": "1em",
+  "margin-bottom":" 2em",
+  "background-color": "#e57373",
+  "color": "#fff",
 }
