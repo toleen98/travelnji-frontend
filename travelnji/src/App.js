@@ -29,6 +29,7 @@ function App() {
     <Route path="/" exact component={Home} />
     <Route path="/Bags" exact component={Bags} />
     <Route path="/Bottels" exact component={Bottels} />
+    <Route path="/" exact component={contact} />
     <Route path="/map" exact component={Map} />
 
     <Route path="/contact" exact component={contact} />
