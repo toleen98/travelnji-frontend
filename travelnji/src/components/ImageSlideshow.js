@@ -74,7 +74,7 @@ class ImgesSlideshow extends Component {
                 <div style={{backgroundColor:'#060b5c'}}>
                 <div className='cards-slider'  >
                       <div className='cards-slider-wrapper' style={{
-                  'transform': `translateX(-${ i   *(100/ activity.length * 6 ) }%)`, 
+                  'transform': `translateX(-${ i   *(100/ activity.length * 7 ) }%)`, 
                 }}>
                       {Places[this.props.place].activities.map(active => {
                        return  (

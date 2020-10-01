@@ -71,7 +71,7 @@ Travelnji
             SlideShow
           </Button>
 
-           <Button  component={RouterLink} to="/contact" color="" className={classes.title}>
+           <Button  component={RouterLink} to="/map" color="" className={classes.title}>
             Map
           </Button>
 
