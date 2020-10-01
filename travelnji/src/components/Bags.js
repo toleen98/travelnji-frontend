@@ -1,3 +1,5 @@
+
+
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import clsx from 'clsx';
@@ -19,32 +21,35 @@ import MoreVertIcon from '@material-ui/icons/MoreVert';
 import img from "../assets/logo.jpg";
 import bag from "../assets/bag.jpg";
 const useStyles = makeStyles((theme) => ({
-     body: {
-    display: 'grid',
-    gridTemplateColumns: '1fr 1fr',
-    gridGap: theme.spacing(2),
-    [theme.breakpoints.up('md')]: {
-      gridTemplateColumns: '1fr 1fr 1fr 1fr',
-    },
-    '$jagged &': {
-      '& > *:nth-child(even)': {
-        paddingTop: theme.spacing(6),
-      },
-    },
-  },
-  header: {
-    textAlign: 'center',
-  },
-  heading: {
-    textTransform: 'uppercase',
-  },
-  avatar: {
-    backgroundColor: red[500],
+   root: {
+    maxWidth: 345,
+
   },
   media: {
     height: 0,
     paddingTop: '56.25%', // 16:9
+    color:"#002884"
   },
+  expand: {
+    transform: 'rotate(0deg)',
+    marginLeft: 'auto',
+        color:"#002884",
+
+    transition: theme.transitions.create('transform', {
+      duration: theme.transitions.duration.shortest,
+    }),
+  },
+  expandOpen: {
+    transform: 'rotate(180deg)',
+  },
+  avatar: {
+    backgroundColor: red[500],
+  },
+
+
+
+
+
 }));
 
 export default function Bags() {
@@ -56,8 +61,14 @@ export default function Bags() {
   };
 
   return (
+
 <div style ={h1} >
-    <div >
+<div style={h4}>Bags are tricky when it comes to sustainability – there are a lot of different materials and they all have pros and cons. Leather comes with a slew of tanning and cruelty issues while the vegan alternatives tend to be made of plastics or have plastic coatings. There are no “perfect” choices however I’ve rounded up some options and brands which I think are producing their products more consciously</div>
+
+
+    <div style={h2} >
+    <br></br>     <br></br>
+
     <Card className={classes.root}>
       <CardHeader
         avatar={
@@ -95,9 +106,9 @@ export default function Bags() {
     </div>
 
 
-    <div >
-    <br></br>
-    <br></br>
+    <div style={h2}>
+    <br></br><br></br>
+   
     <Card className={classes.root}>
       <CardHeader
         avatar={
@@ -140,7 +151,7 @@ export default function Bags() {
       
 
 
-    <div >
+    <div style={h2}>
     <br></br><br></br>
     <Card className={classes.root}>
       <CardHeader
@@ -177,7 +188,7 @@ tote bags from leftover materials of our tipis! Colourful, sustainable and durab
     </Card>
     </div>
 
-    <div ><br></br><br></br>
+    <div style={h2} ><br></br><br></br>
     <Card className={classes.root}>
       <CardHeader
         avatar={
@@ -223,14 +234,55 @@ this type of bag can be made of eco friendly plastic materials biodegrable shopp
   );
 }
 
-
-
-
 const h1={
-  "width":" 50%",
- " minHeight":"50%",
-  "margin":"10 auto",
-   "display": "grid",
-   " grid-template-columns":" repeat(auto-fill, minmax(230px, 1fr))",
-   " grid-gap": "50px",
+//   "width":" 50%",
+//  " minHeight":"50%",
+//   "margin":"10 auto",
+   
+//    " grid-template-columns":" repeat(auto-fill, minmax(230px, 1fr))",
+//    " grid-gap": "50px",
+
+   
+// "  width":"100%",
+//   " display ": "flex",
+//   "justify-content": "center"
+// }
+
+"display": "flex",
+ "   flex-direction": "row",
+    "flex-wrap": "wrap",
+  "  justify-content": "center",
+   " align-items": "center"
+
+
+
+
+        }
+
+const h2={
+  "  width":"50%",
+  " display ": "flex",
+  "justify-content": "center",
+
+" minHeight":"50%",
+  // "display": "-webkit-box",
+  "-webkit-box-pack": "center",
+ " -webkit-box-align": "center",
+  "margin": "auto",
+  // "position": "absolute",
+  "left":"0",
+  "right": "0",
+  "top": "0",
+  "bottom": "0",
+
+}
+const h4={
+" box-sizing":" border-box",
+  "width": "100%",
+  // "display": "flex",
+ " justify-content": "center",
+  "padding": "1em",
+  "margin-bottom":" 2em",
+  "background-color": "#e57373",
+  "color": "#fff",
 }
